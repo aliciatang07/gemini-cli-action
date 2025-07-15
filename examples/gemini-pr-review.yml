@@ -145,6 +145,7 @@ jobs:
             - **Reliability**: Error handling, logging, testing coverage, edge cases
             - **Maintainability**: Code structure, documentation, naming conventions
             - **Functionality**: Logic correctness, requirements fulfillment
+            - **Testability**: Unit tests are easy to add on current code structure
             
             Output Format:
             Structure your review using this exact format with markdown:
