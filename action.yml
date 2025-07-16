@@ -84,6 +84,7 @@ runs:
         GEMINI_RESPONSE=$(gemini --yolo --prompt "$PROMPT")
         # Set the captured response as a step output
         echo "gemini_result=${GEMINI_RESPONSE}" >> "$GITHUB_OUTPUT"
+        echo "EOF" >> "$GITHUB_OUTPUT"
       shell: bash
       env:
         GEMINI_API_KEY: ${{ inputs.GEMINI_API_KEY }}
