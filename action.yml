@@ -28,7 +28,8 @@ inputs:
       Can be a specific version from npm (e.g., '0.1.0', 'latest'), a branch name (e.g., 'main'), or a commit hash.
     required: false
     default: 'latest'
-
+outputs:
+  gemini_cli_results:  ${{ steps.gemini_run.outputs.gemini_result }}
 runs:
   using: "composite"
   steps:
@@ -85,13 +86,13 @@ runs:
         GEMINI_API_KEY: ${{ inputs.GEMINI_API_KEY }}
         PROMPT: ${{ inputs.prompt }}
 
-    - name: Use the captured output
-      run: |
-        # echo "Gemini's output was: ${{ steps.gemini_run.outputs.gemini_result }}"
-        # If the output is JSON, you can parse it (e.g., using `jq`)
-        echo "****PARSING OUTPUT****"
-        echo "${{ steps.gemini_run.outputs.gemini_result }}" | jq .message
-      shell: bash
+    # - name: Use the captured output
+    #   run: |
+    #     # echo "Gemini's output was: ${{ steps.gemini_run.outputs.gemini_result }}"
+    #     # If the output is JSON, you can parse it (e.g., using `jq`)
+    #     echo "****PARSING OUTPUT****"
+    #     echo "${{ steps.gemini_run.outputs.gemini_result }}" | jq .message
+    #   shell: bash
 
 branding:
   icon: 'terminal'
