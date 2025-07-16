@@ -86,14 +86,6 @@ runs:
         GEMINI_API_KEY: ${{ inputs.GEMINI_API_KEY }}
         PROMPT: ${{ inputs.prompt }}
 
-    # - name: Use the captured output
-    #   run: |
-    #     # echo "Gemini's output was: ${{ steps.gemini_run.outputs.gemini_result }}"
-    #     # If the output is JSON, you can parse it (e.g., using `jq`)
-    #     echo "****PARSING OUTPUT****"
-    #     echo "${{ steps.gemini_run.outputs.gemini_result }}" | jq .message
-    #   shell: bash
-
 branding:
   icon: 'terminal'
   color: 'blue'
