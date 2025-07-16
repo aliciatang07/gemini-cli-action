@@ -69,6 +69,7 @@ jobs:
           echo "EOF" >> "$GITHUB_OUTPUT"
 
       - name: Run Gemini PR Review
+        id: call_gemini_action
         uses: ./
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -171,3 +172,9 @@ jobs:
             - Mention specific good practices or implementations
             - Acknowledge well-written code sections
             - Note improvements from previous versions
+      - name: Display Final Output from Gemini CLI Action
+        run: |
+          echo "The final output from the Gemini CLI Action is:"
+          # Access the output of the composite action using its step ID and the output name
+          echo "${{ steps.call_gemini_action.outputs.gemini_cli_results }}"
+        shell: bash 
