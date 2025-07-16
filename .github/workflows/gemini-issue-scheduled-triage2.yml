@@ -1,4 +1,4 @@
-name: Gemini Scheduled Issue Triage2
+name: Gemini Scheduled Issue Triage 2
 
 on:
   push:
