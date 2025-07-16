@@ -4,7 +4,7 @@ This project is a **composite GitHub Action**, designed to be reusable, efficien
 
 Your primary goal is to ensure that any changes you make adhere to the best practices for creating high-quality GitHub Actions.
 
-### Core Principles for This Action
+### Core Principles for This Action 
 
 1.  **Understand the `action.yml` Manifest:**
     *   This is the heart of the action. It defines inputs, outputs, branding, and the execution steps.
