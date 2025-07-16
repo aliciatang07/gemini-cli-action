@@ -81,9 +81,14 @@ runs:
     - name: Run Gemini CLI
       id: gemini_run
       run: |
-        GEMINI_RESPONSE=$(gemini --yolo --prompt "$PROMPT")
+        # GEMINI_RESPONSE=$(gemini --yolo --prompt "$PROMPT")
         # Set the captured response as a step output
-        echo "gemini_result=${GEMINI_RESPONSE}" >> "$GITHUB_OUTPUT"
+        # 
+        set -e
+        GEMINI_RESPONSE=$(gemini --yolo --prompt "$PROMPT")
+        # Set the captured response as a step output, supporting multiline
+        echo "gemini_result<<EOF" >> "$GITHUB_OUTPUT"
+        echo "$GEMINI_RESPONSE" >> "$GITHUB_OUTPUT"
         echo "EOF" >> "$GITHUB_OUTPUT"
       shell: bash
       env:
