@@ -1,4 +1,4 @@
-name: Gemini PR Review
+name: Gemini PR Review Flow
 
 on:
   issue_comment:
