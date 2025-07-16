@@ -29,7 +29,9 @@ inputs:
     required: false
     default: 'latest'
 outputs:
-  gemini_cli_results:  ${{ steps.gemini_run.outputs.gemini_result }}
+  gemini_cli_results:
+    description: "The raw output from the Gemini CLI execution."
+    value: ${{ steps.gemini_run.outputs.gemini_result }}
 runs:
   using: "composite"
   steps:
@@ -82,6 +84,7 @@ runs:
         GEMINI_RESPONSE=$(gemini --yolo --prompt "$PROMPT")
         # Set the captured response as a step output
         echo "gemini_result=${GEMINI_RESPONSE}" >> "$GITHUB_OUTPUT"
+      shell: bash
       env:
         GEMINI_API_KEY: ${{ inputs.GEMINI_API_KEY }}
         PROMPT: ${{ inputs.prompt }}
