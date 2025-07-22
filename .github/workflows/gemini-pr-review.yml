@@ -172,7 +172,11 @@ jobs:
                 "enabled": true,
                 "target": "gcp"
               },
-              "sandbox": false
+              "sandbox": false,
+              "session": {
+                "max_turns_history": 30,  // Hypothetical: Max turns to keep in context
+                "auto_save_session": true // Hypothetical: Whether to save session history
+              } 
             }
           prompt: |-
             ## Role
