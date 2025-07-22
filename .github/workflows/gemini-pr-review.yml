@@ -173,7 +173,7 @@ jobs:
                 "target": "gcp"
               },
               "sandbox": false,
-              "maxSessionTurns": 20,
+              "maxSessionTurns": 20
             }
           prompt: |-
             ## Role
