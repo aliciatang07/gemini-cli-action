@@ -300,5 +300,5 @@ jobs:
         run: |
           echo "The final output from the Gemini CLI Action is:"
           # Access the output of the composite action using its step ID and the output name
-          echo "${{ steps.call_gemini_action.outputs.gemini_cli_results }}"
+          echo "${{ steps.call_gemini_action.outputs.gemini_response }}"
         shell: bash 
