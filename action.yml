@@ -104,11 +104,11 @@ runs:
         set -e
         GEMINI_RESPONSE=$(gemini --yolo --prompt "${PROMPT}")
         # Set the captured response as a step output, supporting multiline
-        echo "gemini_response<<EOF" >> "$GITHUB_OUTPUT"
-        echo "$GEMINI_RESPONSE" >> "$GITHUB_OUTPUT"
-        echo "EOF" >> "$GITHUB_OUTPUT"
+        echo "gemini_response<<EOF" >> "${GITHUB_OUTPUT}"
+        echo "${GEMINI_RESPONSE}" >> "${GITHUB_OUTPUT}"
+        echo "EOF" >> "${GITHUB_OUTPUT}"
         echo "gemini_response test<<EOF"
-        echo "$GEMINI_RESPONSE"
+        echo "${GEMINI_RESPONSE}"
         echo "EOF"
       shell: 'bash'
       env:
