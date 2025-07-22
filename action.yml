@@ -107,7 +107,9 @@ runs:
         echo "gemini_response<<EOF" >> "$GITHUB_OUTPUT"
         echo "$GEMINI_RESPONSE" >> "$GITHUB_OUTPUT"
         echo "EOF" >> "$GITHUB_OUTPUT"
-        echo " test echo output $GEMINI_RESPONSE"
+        echo "gemini_response test<<EOF"
+        echo "$GEMINI_RESPONSE"
+        echo "EOF" >>
       shell: 'bash'
       env:
         GEMINI_API_KEY: '${{ env.GEMINI_API_KEY }}'
