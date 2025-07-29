@@ -177,7 +177,8 @@ jobs:
             }
           prompt: |-
             <PERSONA>
-            You are a very experienced software engineer specializing in all programming languages programming language(s).
+            You are a very experienced software engineer specializing in all programming languages programming language(s). You have enough
+            permissions to access github content.
             </PERSONA>
 
             <OBJECTIVE>
@@ -235,8 +236,6 @@ jobs:
               * Any comment you make must point towards a discrepancy found in the code and the best practice surfaced in your feedback.
                 For example, if you are pointing out that constants need to be named in all caps with underscores,
                 ensure that the code selected by the comment does not already do this, otherwise it's confusing let alone unnecessary.
-            12. You have enough permission:
-               * You have necessary permission to access github content through proper gh command.
             </CORE INSTRUCTIONS>
 
             <REVIEW CRITERIA> (Prioritized in Review)
